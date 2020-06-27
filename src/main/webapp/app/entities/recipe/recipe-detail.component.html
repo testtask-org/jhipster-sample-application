@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="recipe">
+            <h2><span jhiTranslate="recipeApp.recipe.detail.title">Recipe</span> {{ recipe.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="recipeApp.recipe.description">Description</span></dt>
+                <dd>
+                    <span>{{ recipe.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeApp.recipe.prepTime">Prep Time</span></dt>
+                <dd>
+                    <span>{{ recipe.prepTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeApp.recipe.cookTime">Cook Time</span></dt>
+                <dd>
+                    <span>{{ recipe.cookTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeApp.recipe.servings">Servings</span></dt>
+                <dd>
+                    <span>{{ recipe.servings }}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeApp.recipe.source">Source</span></dt>
+                <dd>
+                    <span>{{ recipe.source }}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeApp.recipe.url">Url</span></dt>
+                <dd>
+                    <span>{{ recipe.url }}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeApp.recipe.directions">Directions</span></dt>
+                <dd>
+                    <span>{{ recipe.directions }}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeApp.recipe.difficulty">Difficulty</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'recipeApp.Difficulty.' + recipe.difficulty }}">{{ recipe.difficulty }}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeApp.recipe.image">Image</span></dt>
+                <dd>
+                    <div *ngIf="recipe.image">
+                        <a (click)="openFile(recipe.imageContentType, recipe.image)">
+                            <img [src]="'data:' + recipe.imageContentType + ';base64,' + recipe.image" style="max-width: 100%;" alt="recipe image"/>
+                        </a>
+                        {{ recipe.imageContentType }}, {{ byteSize(recipe.image) }}
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/recipe', recipe.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

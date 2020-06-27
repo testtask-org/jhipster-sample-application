@@ -1,0 +1,21 @@
+{
+  "name": "UnitofMeasure",
+  "fields": [
+    {
+      "fieldName": "uom",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200627125133",
+  "entityTableName": "unitof_measure",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

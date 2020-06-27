@@ -1,0 +1,10 @@
+{
+  "recipeApp": {
+    "Difficulty": {
+      "null": "",
+      "EASY": "EASY",
+      "MODERATE": "MODERATE",
+      "HARD": "HARD"
+    }
+  }
+}
