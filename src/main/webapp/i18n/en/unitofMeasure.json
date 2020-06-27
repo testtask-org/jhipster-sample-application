@@ -1,0 +1,22 @@
+{
+  "recipeApp": {
+    "unitofMeasure": {
+      "home": {
+        "title": "Unitof Measures",
+        "createLabel": "Create a new Unitof Measure",
+        "createOrEditLabel": "Create or edit a Unitof Measure",
+        "notFound": "No Unitof Measures found"
+      },
+      "created": "A new Unitof Measure is created with identifier {{ param }}",
+      "updated": "A Unitof Measure is updated with identifier {{ param }}",
+      "deleted": "A Unitof Measure is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Unitof Measure {{ id }}?"
+      },
+      "detail": {
+        "title": "Unitof Measure"
+      },
+      "uom": "Uom"
+    }
+  }
+}
